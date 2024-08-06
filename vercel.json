@@ -5,7 +5,7 @@
         "src": "app.py",
         "use": "@vercel/python",
         "config": {
-          "maxLambdaSize": "50mb"
+          "runtime": "python3.6"
         }
       }
     ],
@@ -14,12 +14,6 @@
         "src": "/(.*)",
         "dest": "/app.py"
       }
-    ],
-    "functions": {
-      "api/**/*.py": {
-        "memory": 1024,
-        "maxDuration": 10
-      }
-    }
+    ]
   }
   
